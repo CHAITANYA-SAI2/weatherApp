@@ -16,7 +16,7 @@ app.post("/",function(req,res){
         response.on("data",function(data){
            
             var result=JSON.parse(data); 
-            res.render('index',{temp:result.main.temp,city:req.body.location});
+            res.render('index',{temp:result.main.temp+" degrees celcius",city:req.body.location});
            
         });
     });
